@@ -8,22 +8,22 @@ import com.linxo.test.R
 import com.linxo.test.dto.AlbumModel
 import com.squareup.picasso.Picasso
 
-class FolderDetailAdapter : RecyclerView.Adapter<FolderDetailHolder>() {
+class AlbumAdapter : RecyclerView.Adapter<AlbumHolder>() {
 
     private lateinit var callback: Callback
     private var items: ArrayList<AlbumModel> = ArrayList()
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FolderDetailHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AlbumHolder {
         val itemView: View = LayoutInflater.from(parent.context)
             .inflate(R.layout.cell_folder_detail, parent, false)
-        return FolderDetailHolder(itemView)
+        return AlbumHolder(itemView)
     }
 
     override fun getItemCount(): Int {
         return items.size
     }
 
-    override fun onBindViewHolder(holder: FolderDetailHolder, position: Int) {
+    override fun onBindViewHolder(holder: AlbumHolder, position: Int) {
         val item: AlbumModel = items[position]
 
         if (item.urlList.size > 0) {
@@ -36,7 +36,7 @@ class FolderDetailAdapter : RecyclerView.Adapter<FolderDetailHolder>() {
         holder.tvAuthor.text = item.author
 
         holder.itemView.setOnClickListener {
-            callback.onDetailItemClick(position)
+            callback.onAlbumItemClick(position)
         }
     }
 
@@ -55,6 +55,6 @@ class FolderDetailAdapter : RecyclerView.Adapter<FolderDetailHolder>() {
     }
 
     interface Callback {
-        fun onDetailItemClick(position: Int)
+        fun onAlbumItemClick(position: Int)
     }
 }

@@ -8,7 +8,7 @@ import butterknife.BindView
 import butterknife.ButterKnife
 import com.linxo.test.R
 
-class FolderDetailHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+class AlbumHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
     @BindView(R.id.iv_picture)
     lateinit var ivPicture: ImageView
