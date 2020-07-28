@@ -7,6 +7,9 @@ import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 
+/**
+ * AlbumActivity's Presenter
+ */
 class AlbumActivityPresenter : BaseActivityPresenter(), IAlbumActivityMvpPresenter {
 
     private var selectedFolderId = 0
@@ -24,6 +27,9 @@ class AlbumActivityPresenter : BaseActivityPresenter(), IAlbumActivityMvpPresent
         loadData()
     }
 
+    /**
+     * Load data from Fake API
+     */
     private fun loadData() {
         mvpView.showLoading()
         disposableManager.add(Observable.fromCallable {

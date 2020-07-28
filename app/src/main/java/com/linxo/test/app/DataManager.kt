@@ -11,8 +11,10 @@ class DataManager {
 
     var pictures = ArrayList<AlbumModel>()
 
+    /**
+     * Creating a model object from the response
+     */
     fun onSyncResponse(response : String) {
-
         try {
             pictures.clear()
             val jSonObject = JSONObject(response)
@@ -25,9 +27,11 @@ class DataManager {
         } catch (e : Exception) {
             Log.e("SYNC",e.message!!)
         }
-
     }
 
+    /**
+     * Convert Json object to list, using AlbumData
+     */
     private fun convertJsonResponse(sync : JSONObject) : Array<AlbumData.PictureDataInformation> {
         val data = sync.getString(Webservice.SYNC_ID)
         val gSon = GsonBuilder().create()

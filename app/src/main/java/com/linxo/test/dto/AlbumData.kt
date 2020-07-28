@@ -2,6 +2,9 @@ package com.linxo.test.dto
 
 import com.google.gson.annotations.SerializedName
 
+/**
+ * Contain data from Json Object
+ */
 class AlbumData {
 
     companion object {

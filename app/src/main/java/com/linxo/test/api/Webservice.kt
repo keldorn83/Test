@@ -8,8 +8,14 @@ import okhttp3.Request
 import java.io.IOException
 import java.util.*
 
+/**
+ * Http request
+ */
 class Webservice {
 
+    /**
+     * Sync with fake API
+     */
     @Throws(IOException::class)
     fun sync(): String {
 

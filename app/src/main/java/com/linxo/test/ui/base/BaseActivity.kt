@@ -17,6 +17,9 @@ abstract class BaseActivity : AppCompatActivity(), IBaseActivityMvpView {
     private var unbinder: Unbinder? = null
     protected var progressBarHandler: ProgressBarHandler? = null
 
+    /**
+     * Init Resources and Presenter
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(layoutResourceId)
@@ -24,8 +27,14 @@ abstract class BaseActivity : AppCompatActivity(), IBaseActivityMvpView {
         setUp()
     }
 
+    /**
+     * Give the used presenter to the activity
+     */
     abstract fun instantiatePresenter() : BaseActivityPresenter
 
+    /**
+     * SetUp
+     */
     protected open fun setUp() {
         unbinder = ButterKnife.bind(this)
         setUpProgressBar()
@@ -36,6 +45,9 @@ abstract class BaseActivity : AppCompatActivity(), IBaseActivityMvpView {
             window.decorView.findViewById(android.R.id.content) as ViewGroup
         )
     }
+
+    // [LifeCycle]
+    // Link presenter and activity lifecycle
 
     override fun onDestroy() {
         super.onDestroy()
@@ -62,10 +74,18 @@ abstract class BaseActivity : AppCompatActivity(), IBaseActivityMvpView {
         presenter!!.onStop()
     }
 
+    // [LifeCycle]
+
+    /**
+     * Display loader to screen
+     */
     override fun showLoading() {
         progressBarHandler!!.show()
     }
 
+    /**
+     * Hide loader to screen
+     */
     override fun hideLoading() {
         progressBarHandler!!.hide()
     }

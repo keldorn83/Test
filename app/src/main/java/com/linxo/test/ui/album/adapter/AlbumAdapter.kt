@@ -8,6 +8,9 @@ import com.linxo.test.R
 import com.linxo.test.dto.AlbumModel
 import com.squareup.picasso.Picasso
 
+/**
+ * Adapter class of Album Activity
+ */
 class AlbumAdapter : RecyclerView.Adapter<AlbumHolder>() {
 
     private lateinit var callback: Callback
@@ -40,6 +43,9 @@ class AlbumAdapter : RecyclerView.Adapter<AlbumHolder>() {
         }
     }
 
+    /**
+     * Set data from request
+     */
     fun setData(items: List<AlbumModel>) {
         if (this.items.count() > 0) {
             this.items.clear()

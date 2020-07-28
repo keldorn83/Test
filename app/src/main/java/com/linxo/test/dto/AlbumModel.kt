@@ -1,5 +1,8 @@
 package com.linxo.test.dto
 
+/**
+ * Model class of Album
+ */
 class AlbumModel {
 
     var id : Int = 0
@@ -9,6 +12,9 @@ class AlbumModel {
 
     companion object {
 
+        /**
+         * Build Album Model from HTTP request's retrieved data
+         */
         fun buildPictureModel(albumData: AlbumData.PictureDataInformation)
                 : AlbumModel {
 

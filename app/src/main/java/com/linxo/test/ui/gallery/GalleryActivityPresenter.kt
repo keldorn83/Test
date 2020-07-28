@@ -23,6 +23,9 @@ class GalleryActivityPresenter : BaseActivityPresenter(), IGalleryActivityMvpPre
         loadData()
     }
 
+    /**
+     * Get pictures's list from selected Album
+     */
     private fun loadData() {
         mvpView.showLoading()
         disposableManager.add(Observable.fromCallable {

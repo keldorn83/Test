@@ -13,6 +13,9 @@ class SplashActivity : AppCompatActivity() {
         startFolderDetailActivity()
     }
 
+    /**
+     * Start the first activity
+     */
     private fun startFolderDetailActivity() {
         startActivity(AlbumActivity.getIntent(this@SplashActivity))
         finish()

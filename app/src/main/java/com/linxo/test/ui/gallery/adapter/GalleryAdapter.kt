@@ -7,6 +7,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.linxo.test.R
 import com.squareup.picasso.Picasso
 
+/**
+ * Adapter class of Gallery Activity
+ */
 class GalleryAdapter : RecyclerView.Adapter<GalleryHolder>() {
 
     private var items: ArrayList<String> = ArrayList()
@@ -29,6 +32,9 @@ class GalleryAdapter : RecyclerView.Adapter<GalleryHolder>() {
             .into(holder.ivPicture)
     }
 
+    /**
+     * Set data from request
+     */
     fun setData(items: List<String>) {
         if (this.items.count() > 0) {
             this.items.clear()

@@ -52,6 +52,9 @@ class GalleryActivity : BaseActivity(), IGalleryActivityMvpView {
         setUpValues()
     }
 
+    /**
+     * Add values to adapter
+     */
     private fun setUpValues() {
         val hasData = pictures.size > 0
         if (hasData) {
