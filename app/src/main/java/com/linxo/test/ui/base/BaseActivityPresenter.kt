@@ -27,12 +27,4 @@ abstract class BaseActivityPresenter : IBaseActivityMvpPresenter {
     open fun onStop() {
         disposableManager.dispose()
     }
-
-    open fun showLoading() {
-        mvpView.showLoading()
-    }
-
-    open fun hideLoading() {
-        mvpView.hideLoading()
-    }
 }
