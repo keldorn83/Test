@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- FolderActivity -->
+    <dimen name="folder_layout_dimen">100dp</dimen>
+    <dimen name="folder_text_dimen">40dp</dimen>
+    <dimen name="folder_layout_margin">5dp</dimen>
+
+    <!-- GalleryActivity -->
+    <dimen name="gallery_margin_top">10dp</dimen>
+    <dimen name="gallery_layout_margin">1dp</dimen>
+
+    <!-- Progress Bar -->
+    <dimen name="progress_bar_handler_margin_top">-7dp</dimen>
+
+</resources>
